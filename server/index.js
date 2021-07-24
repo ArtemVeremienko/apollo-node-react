@@ -9,13 +9,13 @@ const app = express()
 app.use(cors())
 
 const root = {
-    getAllUsers: () =>  users,
-    getUser: ({id}) => users.find(user => user.id === id),
-    createUser: ({input}) => {
-        const user = {...input, id: Date.now()}
-        users.push(user)
-        return user
-    }
+  getAllUsers: () => users,
+  getUser: ({ id }) => users.find(user => user.id == id),
+  createUser: ({ input }) => {
+    const user = { ...input, id: Date.now() }
+    users.push(user)
+    return user
+  },
 }
 
 app.use('/graphql', graphqlHTTP({
