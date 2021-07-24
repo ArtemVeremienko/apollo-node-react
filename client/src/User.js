@@ -24,8 +24,8 @@ export default function User({ id }) {
   return (
     <div>
       <h2>Single user:</h2>
+      <p>ID: {getUser.id}</p>
       <p>Name: {getUser.username}</p>
-      <p>Age: {getUser.age}</p>
     </div>
   )
 }
